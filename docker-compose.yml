@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  wordpress:
+    image: wordpress:4.9.4-php7.2-apache
+    environment:
+      - WORDPRESS_DB_USER=wpadmin
+      - WORDPRESS_DB_PASSWORD=gafs24rvaf4536sd
+    ports:
+      - 80:80
+    
+  mysql:
+    image: mariadb:10.3.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=acers1608gtv3
+      - MYSQL_USER=wpadmin
+      - MYSQL_PASSWORD=gafs24rvaf4536sd
+      - MYSQL_DATABASE=wordpress
